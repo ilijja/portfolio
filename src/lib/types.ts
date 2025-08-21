@@ -17,6 +17,21 @@ export enum TechStackIcon {
   PASSPORT = "Passport.js",
   AWS_S3_BUCKET = "AWS_S3_BUCKET",
   KONVA = "React Konva",
+  STRIPE = "Stripe",
+  POLAR = "Polar.sh",
+  LEMONSQUEEZY = "Lemonsqueezy",
+  TYPESCRIPT = "TypeScript",
+  SOCKETIO = "Socket.IO",
+  SHADCN = "shadcn",
+  TAILWIND = "tailwind",
+  ANGULAR = "Angular",
+  JAVA = "Java",
+  JAVASCRIPT = "JavaScript",
+  OPENAI = "OpenAI",
+  NODEMAILER = "Node Mailer",
+  GOOGLE_MAPS = "Google Maps",
+  MY_SQL = "MySQL",
+  REDDIT = "Reddit API"
 }
 
 export const diplomskiURL =

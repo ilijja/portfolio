@@ -10,6 +10,7 @@ import {
 import { Project, TechStackIcon } from "@/lib/types";
 import Image from "next/image";
 import TechStackIcons from "./TechStackIcons";
+import { LinkIcon } from "lucide-react";
 
 interface Props {
   open: boolean;
@@ -30,6 +31,8 @@ const PreviewDialog = ({ open = false, setOpen, project }: Props) => {
         return "restt";
       case "reddtick":
         return name;
+      case "slovenia-transfer":
+        return null;
       default:
         return "qwaak";
     }
@@ -58,12 +61,27 @@ const PreviewDialog = ({ open = false, setOpen, project }: Props) => {
           </DialogHeader>
           <div className="flex flex-col gap-2">
             <div>
-              <video
-                crossOrigin="anonymous"
-                controls
-                className="rounded-2xl"
-                src={videoUrl}
-              />
+              {project.name !== "slovenia-transfer" && (
+                <video
+                  crossOrigin="anonymous"
+                  controls
+                  className="rounded-2xl"
+                  src={videoUrl}
+                />
+              )}
+              {project.name === "slovenia-transfer" && (
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://booking.slovenia-transfer.com/reservation",
+                      "_blank"
+                    )
+                  }
+                  className="bg-zinc-800 cursor-pointer hover:bg-zinc-700 duration-200 items-center flex gap-1 w-fit text-zinc-50 font-sm px-3 py-1 rounded-lg"
+                >
+                  <LinkIcon size={16} /> Visit website
+                </button>
+              )}
             </div>
           </div>
           <DialogFooter className="flex items-end justify-between">

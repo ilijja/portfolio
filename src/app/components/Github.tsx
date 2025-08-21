@@ -17,7 +17,7 @@ const Matrix = () => {
         row.push(
           <div
             key={j}
-            className={`w-[10px] h-[10px] sm:w-[14px] sm:h-[14px] rounded border border-zinc-100 m-[3px] flex items-center justify-center text-xs ${
+            className={`w-[10px] h-[10px] sm:w-[8px] sm:h-[8px] lg:w-[14px] lg:h-[14px] rounded border border-zinc-100 m-[3px] flex items-center justify-center text-xs ${
               isGreen ? "bg-green-300" : "bg-zinc-100"
             }`}
           ></div>
@@ -39,7 +39,7 @@ const Github = () => {
   return (
     <div
       onClick={() => window.open("https://github.com/ilijja", "_blank")}
-      className="flex w-full max-w-80 h-fit border border-zinc-100 hover:scale-[104%] cursor-pointer duration-200 rounded-3xl shadow-sm items-center justify-between p-2"
+      className="flex w-fit min-w-fit h-fit border border-zinc-100 hover:scale-[104%] cursor-pointer duration-200 rounded-3xl shadow-sm items-center justify-between p-2"
     >
       <div className="flex flex-col justify-between min-h-[120px] px-4">
         {" "}

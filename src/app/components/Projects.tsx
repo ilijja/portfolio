@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import { useState } from "react";
 import { Eye, Play } from "lucide-react";
@@ -14,12 +14,16 @@ const projects: Project[] = [
     url: "https://qwaak.app",
     desc: "Automate and edit Tiktok videos with AI influencers",
     techStack: [
+      TechStackIcon.TYPESCRIPT,
       TechStackIcon.NEXTJS,
       TechStackIcon.NODEJS,
       TechStackIcon.MONGO,
       TechStackIcon.FFMPEG,
       TechStackIcon.CLOUDFLARE_R2,
       TechStackIcon.NEXTAUTH,
+      TechStackIcon.TAILWIND,
+      TechStackIcon.SHADCN,
+      TechStackIcon.POLAR,
     ],
   },
   {
@@ -28,10 +32,14 @@ const projects: Project[] = [
     desc: "Ordering and payment system via QR code for restaurants",
 
     techStack: [
+      TechStackIcon.JAVASCRIPT,
       TechStackIcon.REACT,
       TechStackIcon.NODEJS,
       TechStackIcon.MONGO,
       TechStackIcon.KONVA,
+      TechStackIcon.TAILWIND,
+      TechStackIcon.SOCKETIO,
+      TechStackIcon.STRIPE,
     ],
   },
   {
@@ -39,9 +47,14 @@ const projects: Project[] = [
     icon: "/logos/reddit.png",
     desc: "Track any subreddit activity and schedule post at the best time",
     techStack: [
+      TechStackIcon.TYPESCRIPT,
       TechStackIcon.NEXTJS,
       TechStackIcon.MONGO,
       TechStackIcon.NEXTAUTH,
+      TechStackIcon.REDDIT,
+      TechStackIcon.TAILWIND,
+      TechStackIcon.SHADCN,
+      TechStackIcon.LEMONSQUEEZY,
     ],
   },
   {
@@ -49,25 +62,45 @@ const projects: Project[] = [
     icon: "/logos/story.png",
     desc: "Create interactive stories and widgets directly on your website",
     techStack: [
+      TechStackIcon.JAVASCRIPT,
       TechStackIcon.REACT,
       TechStackIcon.NODEJS,
       TechStackIcon.MONGO,
       TechStackIcon.PASSPORT,
       TechStackIcon.AWS_S3_BUCKET,
+      TechStackIcon.TAILWIND,
     ],
   },
   {
     name: "snapshare",
     icon: "/logos/rss.png",
     desc: "Automatic RSS to Twitter repurposing content with AI",
-    techStack: [TechStackIcon.REACT, TechStackIcon.NODEJS, TechStackIcon.MONGO],
+    techStack: [
+      TechStackIcon.JAVASCRIPT,
+      TechStackIcon.REACT,
+      TechStackIcon.NODEJS,
+      TechStackIcon.MONGO,
+      TechStackIcon.TAILWIND,
+      TechStackIcon.SHADCN,
+      TechStackIcon.OPENAI,
+    ],
   },
   {
     name: "slovenia-transfer",
     icon: "/logos/transfer.png",
     url: "https://booking.slovenia-transfer.com/reservation",
     desc: "Automated booking and payment system for Slovenia Transfer",
-    techStack: [TechStackIcon.REACT, TechStackIcon.NODEJS, TechStackIcon.MONGO],
+    techStack: [
+      TechStackIcon.TYPESCRIPT,
+      TechStackIcon.REACT,
+      TechStackIcon.NODEJS,
+      TechStackIcon.MONGO,
+      TechStackIcon.NODEMAILER,
+      TechStackIcon.TAILWIND,
+      TechStackIcon.STRIPE,
+      TechStackIcon.GOOGLE_MAPS,
+      TechStackIcon.SHADCN,
+    ],
   },
 ];
 
@@ -110,7 +143,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
               <p className="font-semibold text-sm text-font-secondary">
                 Built with:
               </p>
-              <div className="flex gap-1">
+              <div className="flex gap-1 flex-wrap">
                 {project.techStack.map((icon: TechStackIcon) => (
                   <TechStackIcons key={icon} icon={icon} />
                 ))}

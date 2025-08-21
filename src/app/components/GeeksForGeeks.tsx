@@ -10,7 +10,7 @@ const GeeksForGeeks = () => {
           "_blank"
         )
       }
-      className="flex w-full max-w-92 h-fit cursor-pointer hover:scale-[104%] duration-200 border border-zinc-100 rounded-3xl shadow-sm items-center justify-between p-2"
+      className="flex min-w-fit w-fit h-fit cursor-pointer hover:scale-[104%] duration-200 border border-zinc-100 rounded-3xl shadow-sm items-center justify-between p-2"
     >
       <div className="flex flex-col justify-between h-full p-4 gap-4">
         <div className="flex flex-col gap-1">
@@ -25,7 +25,7 @@ const GeeksForGeeks = () => {
         </button>
       </div>
 
-      <div className="gap-2  w-full h-full grid grid-cols-2 p-2">
+      <div className="w-full h-full flex gap-2 p-2">
         <div className="col-span-1  items-center justify-center flex flex-col gap-1 mb-2">
           <Image src={"/score.png"} width={32} height={32} alt="solved" />
           <p className="text-xs text-center">Coding score</p>
